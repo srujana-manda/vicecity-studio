@@ -1,16 +1,59 @@
-# React + Vite
+# VICE STUDIO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Character Poster Lab
 
-Currently, two official plugins are available:
+A cinematic character poster creator inspired by the neon, coastal aesthetic of Vice City.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Upload your own photo, customize it using the React Image Editor, choose a visual style, add your character name and tagline, and generate a personalized cinematic poster.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📸 Upload your own image
+- 🎨 Edit images with React Image Editor
+- ✂️ Crop and resize images
+- 🌈 Apply filters and visual effects
+- ✏️ Draw and annotate
+- 🔤 Add text and creative elements
+- 🖼️ Choose from multiple poster styles
+- 👤 Add a custom character name
+- 💬 Add a custom tagline
+- 🎬 Generate a cinematic character poster
+- ⬇️ Download the final poster
 
-## Expanding the ESLint configuration
+## 🎨 Poster Styles
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Miami Nights**
+- **Sunset Drive**
+- **Midnight**
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Unlayer React Image Editor
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/srujana-manda/vicecity-studio.git
+cd vicecity-studio
+
+vicecity-studio/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── Editor.jsx
+│   ├── Editor.css
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
