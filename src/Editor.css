@@ -1,0 +1,570 @@
+/* ================================
+   EDITOR PAGE
+================================ */
+
+.editor-page {
+    min-height: 100vh;
+    background:
+      radial-gradient(
+        circle at 70% 20%,
+        rgba(255, 60, 170, 0.12),
+        transparent 30%
+      ),
+      #08070b;
+    color: white;
+  }
+  
+  
+  /* ================================
+     HEADER
+  ================================ */
+  
+  .editor-header {
+    height: 80px;
+    padding: 0 5%;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .editor-logo {
+    font-family: "Anton";
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  
+  .editor-logo span {
+    color: #ff3cac;
+  }
+  
+  .back-button,
+  .download-button {
+    background: transparent;
+    border: 1px solid #333;
+    color: white;
+  
+    padding: 12px 18px;
+  
+    font-size: 10px;
+    font-weight: 700;
+  
+    letter-spacing: 1px;
+  
+    cursor: pointer;
+  
+    transition: 0.25s;
+  }
+  
+  .download-button {
+    border-color: #ff3cac;
+  }
+  
+  .back-button:hover,
+  .download-button:hover {
+    background: #ff3cac;
+    border-color: #ff3cac;
+  }
+  
+  
+  /* ================================
+     MAIN
+  ================================ */
+  
+  .editor-main {
+    padding: 55px 5%;
+  }
+  
+  .editor-title span {
+    font-family: "DM Mono";
+    color: #ff3cac;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  
+  .editor-title h1 {
+    font-family: "Anton";
+    font-size: 65px;
+    line-height: 0.9;
+    margin: 18px 0 45px;
+  }
+  
+  .editor-title i {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-style: normal;
+  }
+  
+  
+  /* ================================
+     EDITOR LAYOUT
+  ================================ */
+  
+  .editor-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 25px;
+  }
+  
+  
+  /* ================================
+     IMAGE EDITOR
+  ================================ */
+  
+  .image-editor-box {
+    min-width: 0;
+  
+    background: #111015;
+  
+    border: 1px solid #25232b;
+  
+    padding: 15px;
+  
+    overflow: hidden;
+  }
+  
+  
+  /* ================================
+     CUSTOMIZATION PANEL
+  ================================ */
+  
+  .custom-panel {
+    background: #111015;
+  
+    border: 1px solid #25232b;
+  
+    padding: 25px;
+  }
+  
+  .panel-label {
+    font-family: "DM Mono";
+  
+    color: #ff3cac;
+  
+    font-size: 9px;
+  
+    letter-spacing: 2px;
+  
+    padding-bottom: 20px;
+  
+    border-bottom: 1px solid #29272d;
+  
+    margin-bottom: 25px;
+  }
+  
+  
+  /* ================================
+     INPUTS
+  ================================ */
+  
+  .custom-panel label {
+    display: block;
+  
+    font-family: "DM Mono";
+  
+    font-size: 8px;
+  
+    letter-spacing: 1px;
+  
+    color: #777;
+  
+    margin-bottom: 8px;
+  }
+  
+  .custom-panel input {
+    width: 100%;
+  
+    box-sizing: border-box;
+  
+    background: #09080c;
+  
+    border: 1px solid #29272d;
+  
+    color: white;
+  
+    padding: 13px;
+  
+    margin-bottom: 22px;
+  
+    outline: none;
+  
+    font-family: "DM Mono";
+  
+    font-size: 11px;
+  
+    transition: 0.2s;
+  }
+  
+  .custom-panel input:focus {
+    border-color: #ff3cac;
+  
+    box-shadow: 0 0 15px rgba(255, 60, 172, 0.08);
+  }
+  
+  
+  /* ================================
+     STYLE SELECTOR
+  ================================ */
+  
+  .style-section {
+    margin-top: 5px;
+  
+    margin-bottom: 25px;
+  }
+  
+  .style-grid {
+    display: grid;
+  
+    grid-template-columns: repeat(3, 1fr);
+  
+    gap: 8px;
+  }
+  
+  .style-option {
+    background: #09080c;
+  
+    border: 1px solid #29272d;
+  
+    color: #777;
+  
+    padding: 7px;
+  
+    cursor: pointer;
+  
+    font-family: "DM Mono";
+  
+    font-size: 7px;
+  
+    letter-spacing: 0.5px;
+  
+    transition: 0.2s;
+  }
+  
+  .style-option:hover {
+    border-color: #777;
+  
+    transform: translateY(-2px);
+  }
+  
+  .style-option.active {
+    border-color: #ff3cac;
+  
+    color: white;
+  
+    box-shadow: 0 0 15px rgba(255, 60, 172, 0.12);
+  }
+  
+  
+  /* STYLE COLOR PREVIEWS */
+  
+  .style-preview {
+    display: block;
+  
+    height: 55px;
+  
+    margin-bottom: 7px;
+  
+    border-radius: 2px;
+  }
+  
+  .style-miami {
+    background:
+      linear-gradient(
+        160deg,
+        #ff3cac,
+        #7b2cff 55%,
+        #14112d
+      );
+  }
+  
+  .style-sunset {
+    background:
+      linear-gradient(
+        160deg,
+        #ff9a3c,
+        #ff3c91 50%,
+        #4c237a
+      );
+  }
+  
+  .style-midnight {
+    background:
+      linear-gradient(
+        160deg,
+        #111a45,
+        #17112f 50%,
+        #08070b
+      );
+  }
+  
+  
+  /* ================================
+     POSTER PREVIEW
+  ================================ */
+  
+  .poster-preview {
+    height: 330px;
+  
+    position: relative;
+  
+    overflow: hidden;
+  
+    background: #222;
+  
+    margin-top: 10px;
+  
+    border: 1px solid #333;
+  }
+  
+  
+  /* IMAGE */
+  
+  .preview-image {
+    position: absolute;
+  
+    inset: 0;
+  
+    z-index: 0;
+  }
+  
+  .preview-image img {
+    display: block;
+  
+    width: 100%;
+  
+    height: 100%;
+  
+    object-fit: cover;
+  }
+  
+  
+  /* DARK BASE OVERLAY */
+  
+  .preview-image::after {
+    content: "";
+  
+    position: absolute;
+  
+    inset: 0;
+  
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 70, 170, 0.15),
+        rgba(0, 0, 0, 0.8)
+      );
+  }
+  
+  
+  /* ================================
+     STYLE COLOR OVERLAY
+  ================================ */
+  
+  .poster-preview::after {
+    content: "";
+  
+    position: absolute;
+  
+    inset: 0;
+  
+    z-index: 1;
+  
+    pointer-events: none;
+  }
+  
+  
+  /* MIAMI */
+  
+  .poster-preview.style-miami::after {
+    background:
+      linear-gradient(
+        160deg,
+        rgba(255, 60, 172, 0.35),
+        rgba(123, 44, 255, 0.30),
+        rgba(20, 17, 45, 0.55)
+      );
+  
+    mix-blend-mode: screen;
+  }
+  
+  
+  /* SUNSET */
+  
+  .poster-preview.style-sunset::after {
+    background:
+      linear-gradient(
+        160deg,
+        rgba(255, 154, 60, 0.35),
+        rgba(255, 60, 145, 0.30),
+        rgba(76, 35, 122, 0.55)
+      );
+  
+    mix-blend-mode: screen;
+  }
+  
+  
+  /* MIDNIGHT */
+  
+  .poster-preview.style-midnight::after {
+    background:
+      linear-gradient(
+        160deg,
+        rgba(17, 26, 69, 0.45),
+        rgba(23, 17, 47, 0.45),
+        rgba(8, 7, 11, 0.65)
+      );
+  
+    mix-blend-mode: screen;
+  }
+  
+  
+  /* ================================
+     POSTER TEXT
+  ================================ */
+  
+  .preview-overlay {
+    position: absolute;
+  
+    left: 20px;
+  
+    right: 20px;
+  
+    bottom: 20px;
+  
+    z-index: 2;
+  }
+  
+  .preview-overlay span {
+    font-family: "DM Mono";
+  
+    font-size: 7px;
+  
+    letter-spacing: 3px;
+  }
+  
+  .preview-overlay h2 {
+    font-family: "Anton";
+  
+    font-size: 35px;
+  
+    margin: 5px 0;
+  
+    text-transform: uppercase;
+  
+    line-height: 1;
+  }
+  
+  .preview-overlay p {
+    font-family: "DM Mono";
+  
+    font-size: 7px;
+  
+    letter-spacing: 2px;
+  
+    color: #ddd;
+  }
+  
+  
+  /* ================================
+     SAVE BUTTON
+  ================================ */
+  
+  .save-poster {
+    width: 100%;
+  
+    margin-top: 20px;
+  
+    padding: 16px;
+  
+    background: white;
+  
+    color: #08070b;
+  
+    border: none;
+  
+    font-size: 10px;
+  
+    font-weight: 800;
+  
+    letter-spacing: 1px;
+  
+    cursor: pointer;
+  
+    transition: 0.25s;
+  }
+  
+  .save-poster span {
+    margin-left: 15px;
+  }
+  
+  .save-poster:hover {
+    background: #ff3cac;
+  
+    color: white;
+  
+    transform: translateY(-2px);
+  }
+  
+  
+  /* ================================
+     RESPONSIVE
+  ================================ */
+  
+  @media (max-width: 1000px) {
+  
+    .editor-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .custom-panel {
+      max-width: none;
+    }
+  
+  }
+  
+  
+  @media (max-width: 600px) {
+  
+    .editor-header {
+      padding: 0 20px;
+    }
+  
+    .editor-logo {
+      font-size: 17px;
+    }
+  
+    .download-button {
+      padding: 10px;
+    }
+  
+    .editor-main {
+      padding: 35px 20px;
+    }
+  
+    .editor-title h1 {
+      font-size: 50px;
+    }
+  
+    .style-grid {
+      grid-template-columns: 1fr;
+    }
+  
+  }
+  /* =========================
+   FINAL POSTER
+========================= */
+
+.final-poster-section {
+  margin-top: 30px;
+}
+
+.final-poster-image {
+  display: block;
+
+  width: 100%;
+
+  border: 1px solid #333;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
